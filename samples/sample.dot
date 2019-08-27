@@ -1,0 +1,24 @@
+strict digraph  {
+	graph [label="AS path to 192.36.148.17
+
+",
+		labelloc=t
+	];
+	Start	 [color=cornflowerblue,
+		fontcolor=lightgoldenrod,
+		style=filled];
+	Start -> 64901	 [color=green];
+	Start -> 65474	 [color=blue];
+	Start -> 65474	 [color=blue];
+	Start -> 64498	 [color=blue];
+	Start -> 65461	 [color=black];
+	Start -> 65079	 [color=black];
+	64901 -> 11537	 [color=green];
+	11537 -> 22335	 [color=green];
+	22335 -> 65474	 [color=green];
+	65474 -> 29216	 [color=black];
+	65474 -> 65474	 [color=blue];
+	64498 -> 65474	 [color=blue];
+	65461 -> 65474	 [color=black];
+	65079 -> 65474	 [color=black];
+}
