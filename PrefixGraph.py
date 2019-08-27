@@ -4,14 +4,15 @@
 Create a Graphviz diagram of AS paths to reach a given prefix
 '''
 
-from jnpr.junos import Device
-from akgRoutes import *
-import pygraphviz as pgv
 from argparse import ArgumentParser, RawTextHelpFormatter
+import ipaddress
+import os
 from sys import exit
 import time
-import ipaddress
 import yaml
+from akgRoutes import *
+from jnpr.junos import Device
+import pygraphviz as pgv
 
 
 def setConfigOptions():
@@ -312,6 +313,7 @@ def makeGraph(inpaths, prefix, graphopts, startnode):
         G.add_subgraph(termAS, rank='same')
     tfilename = './output/PathTo_' + str(prefix) + '_' + time.strftime("%d%b%Y-%H%M")
     filename = tfilename.replace(':', '-')  # convert colons in v6 addrs to dashes because colons are bad in filenames
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
     if graphopts['dumpplot']:
         G.write(filename + '.dot')
         print("Graphviz file is written as {}".format(filename + '.dot'))
