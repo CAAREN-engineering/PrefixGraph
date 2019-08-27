@@ -9,6 +9,9 @@ Output is a png to ./output/
 The script requires a configuration file in YML for a number of required and options parameters.  This repo contains a
 sample file.  The format is documented below.
 
+### Sample
+![Sample Output](./samples/sample.png)
+
 ### Usage
 ```
 usage: PrefixGraph.py [-h] [-c] [-d] [-s] [-e] [-f] [-l] prefix
