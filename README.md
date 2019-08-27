@@ -1,6 +1,6 @@
 # Graph AS path by Prefix
 
-This script will graph the AS path taken to a given prefix.
+This script will graph the AS path taken to a given prefix.  It will query a Juniper router (tables inet and inet6) for the path.
 
 It uses [PyGraphviz](https://pygraphviz.github.io/) to build and create the graph.
 
