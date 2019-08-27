@@ -109,4 +109,4 @@ venv.bak/
 GWconfig.yml
 __pycache__/
 .idea/
-output/
+output/*
