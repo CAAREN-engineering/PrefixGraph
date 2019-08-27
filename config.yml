@@ -1,12 +1,12 @@
 ---
 routers:
-  ACAD: 2620:106:c005:4fff:ffff:ffff:ffff:178
-  SUPP: 2620:106:c005:4fff:ffff:ffff:ffff:178
-  NVA: 2620:106:c009:cfff:ffff:ffff:ffff:9999
+  RTR1: 2001:DB8:c005:4fff::178
+  RTR2: 2001:DB8:c005:4fff::178
+  RTR3: 2001:DB8:c009:cfff::9999
   
 credentials:
   username: netconf
-  path2keyfile: /home/agallo/.ssh/netconf
+  path2keyfile: /home/user/.ssh/netconf
 
 startnode:
   label: Starting AS
