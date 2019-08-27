@@ -1,0 +1,22 @@
+---
+
+### ------------------------------------------
+### first attempt at using YAML for processing
+### op info from a juniper router
+### ------------------------------------------
+
+akgRouteTable:
+  rpc: get-route-information
+  item: route-table
+  key: rt-destination
+  view: akgRouteView
+
+akgRouteView:
+  fields:
+    table: table-name
+    dest: rt/rt-destination
+    aspath: rt/rt-entry/as-path
+    lp: rt/rt-entry/local-preference
+    nhtype: rt/rt-entry/nh-type
+    peerid: rt/rt-entry/peer-id
+    peeras: rt/rt-entry/peer-as
