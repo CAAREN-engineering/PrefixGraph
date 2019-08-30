@@ -6,10 +6,10 @@ It uses [PyGraphviz](https://pygraphviz.github.io/) to build and create the grap
 
 Output is a png to ./output/
 
-The script requires a configuration file in YML for a number of required and options parameters.  This repo contains a
+The script requires a configuration file in YML for a number of required and optional parameters.  This repo contains a
 sample file.  The format is documented below.
 
-### Sample
+### Sample Output
 ![Sample Output](./samples/sample.png)
 
 ### Usage
