@@ -47,7 +47,7 @@ def setConfigOptions():
                         action="store_true", default=None,
                         help="enable color coding edges by local pref\n(default is don't color code)")
     parser.add_argument('-f', '--first-hop', dest='f',
-                        action="store_false", default=None,
+                        action="store_true", default=None,
                         help="force first hop AS nodes to be on the same level\n(may make ugly graph in some cases)")
     parser.add_argument('-l', '--last-hop', dest='l',
                         action="store_true", default=None,
@@ -324,11 +324,12 @@ def makeGraph(inpaths, prefix, graphopts, startnode):
 
 def main():
     prefix, rtrdict, username, path2keyfile, graphopts, startnode = setConfigOptions()
+    print("Got these graph options: {}".format(graphopts))
     version = validatePrefix(prefix)
     allpaths = getPaths(rtrdict, username, path2keyfile, prefix, version)
     colormapping = createColorMap(allpaths, graphopts['edgecolor'])
     finalpaths = preProcessPaths(allpaths, colormapping, startnode['label'])
     makeGraph(finalpaths, prefix, graphopts, startnode)
 
-
 main()
+
